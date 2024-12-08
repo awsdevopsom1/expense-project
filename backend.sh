@@ -61,9 +61,9 @@ mysql -h mysql-dev.awsdevopsom.online -uroot -p${MYSQL_ROOT_PASSWORD} < /app/sch
 status_check
 
 echo -e "${colour} enable & restart the backend service \e[0m"
-systemctl daemon-reload &>>$log_file
-systemctl enable backend &>>$log_file
-systemctl restart backend &>>$log_file
+systemctl daemon-reload
+systemctl enable backend
+systemctl restart backend 
 status_check
 
 
