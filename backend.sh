@@ -48,7 +48,7 @@ cd /app  &>>log_file
 unzip /tmp/backend.zip &>>log_file
 status_check
 
-echo -e "${color} Download NodeJS Dependencies \e[0m"
+echo -e "${colour} Download NodeJS Dependencies \e[0m"
 npm install &>>$log_file
 status_check
 
@@ -57,7 +57,7 @@ dnf install mysql -y &>>log_file
 status_check
 
 echo -e "${colour} loadschema \e[0m"
-mysql -h <MYSQL-SERVER-IPADDRESS> -uroot -p${MYSQL_ROOT_PASSWORD} < /app/schema/backend.sql &>>log_file
+mysql -h mysql-dev.awsdevopsom.online -uroot -p${MYSQL_ROOT_PASSWORD} < /app/schema/backend.sql &>>log_file
 status_check
 
 echo -e "${colour} enable & restart the backend service \e[0m"
