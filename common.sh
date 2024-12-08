@@ -1,5 +1,5 @@
-log_file = "/tmp/expense.log"
-colour = "\e[33m"
+log_file="/tmp/expense.log"
+colour="\e[33m"
 
 status_check() {
    if [ $? -eq 0 ]; then
