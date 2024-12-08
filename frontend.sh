@@ -24,6 +24,3 @@ echo -e "${colour}  enable & restart the nignx \e[0m"
 systemctl enable nginx &>>$log_file
 systemctl restart nginx &>>$log_file
 status_check
-
-
-
